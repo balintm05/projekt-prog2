@@ -5,27 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp9_05_09"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="400">
-    <Grid x:Name="ablak" Initialized="Grid_Initialized">
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="20" Margin="144,65,0,0" VerticalAlignment="Top" Width="118" SelectionChanged="comboBox_SelectionChanged"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="20" Margin="144,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="button" Content="Bejelentkezés" HorizontalAlignment="Left" Margin="182,139,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="button_Click"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="144,93,0,0" VerticalAlignment="Top" Width="118" Height="20" PasswordChanged="passwordBox_PasswordChanged"/>
-        <Label x:Name="label" Content="Felasználó név:" HorizontalAlignment="Left" Margin="41,61,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Jelszó:" HorizontalAlignment="Left" Margin="86,89,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button1" Content="Kilépés" HorizontalAlignment="Left" Margin="23,169,0,0" VerticalAlignment="Top" Width="74" Height="25" Click="button1_Click"/>
-        <Button x:Name="button2" Content="Beállítások" HorizontalAlignment="Left" Height="25" Margin="103,169,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
-        <CheckBox x:Name="checkBox" Content="Emlékezz rám(név)" HorizontalAlignment="Left" Margin="143,118,0,0" VerticalAlignment="Top" BorderBrush="#FF707070"/>
-        <Button x:Name="button3" Content="Kiválasztás" HorizontalAlignment="Left" Height="25" Margin="155,31,0,0" VerticalAlignment="Top" Width="80" Click="button3_Click" Visibility="Hidden"/>
-        <Label x:Name="label2" Content="Felhaználó név törlése:" HorizontalAlignment="Left" Margin="23,30,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="143" Margin="59,30,0,0" VerticalAlignment="Top" Width="105" Visibility="Hidden"/>
-        <Button x:Name="button4" Content="Törlés" HorizontalAlignment="Left" Height="25" Margin="182,148,0,0" VerticalAlignment="Top" Width="80" Click="button4_Click" Visibility="Hidden"/>
-        <Label x:Name="label3" Content="Sötét mód:" HorizontalAlignment="Left" Margin="85,56,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-        <CheckBox x:Name="checkBox1" Content="" HorizontalAlignment="Left" Margin="154,63,0,0" VerticalAlignment="Top" Checked="checkBox1_Checked" Unchecked="checkBox1_Unchecked" Visibility="Hidden"/>
-        <Button x:Name="button5" Content="Regisztráció" HorizontalAlignment="Left" Height="25" Margin="182,169,0,0" VerticalAlignment="Top" Width="80" Click="button5_Click"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="20" Margin="144,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" Visibility="Hidden"/>
-        <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Height="20" Margin="144,93,0,0" VerticalAlignment="Top" Width="118" Visibility="Hidden"/>
-        <Label x:Name="label4" Content="" HorizontalAlignment="Left" Margin="61,112,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-        <Label x:Name="label5" Content="Label" HorizontalAlignment="Left" Margin="85,138,0,0" VerticalAlignment="Top"/>
+        Title="Loading" Height="450" Width="600" Activated="Window_load_Activated">
+    <Grid x:Name="loading1">
+        <Grid.Background>
+            <ImageBrush ImageSource="cinema fedolap.jpg"/>
+        </Grid.Background>
+        <ProgressBar x:Name="load" HorizontalAlignment="Left" Height="10" Margin="135,384,0,0" VerticalAlignment="Top" Width="329"/>
+        <Label x:Name="label" Content="Betöltés" HorizontalAlignment="Left" Margin="258,358,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
+
     </Grid>
 </Window>
