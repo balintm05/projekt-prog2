@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp9_05_09"
         mc:Ignorable="d"
-        Title="Jegyvásárlás" Height="450" Width="800">
-    <Grid x:Name="Jegy">
-        
+        Title="Jegyvásárlás" Height="450" Width="350" Icon="popcorn-cinema-icon-on-white-background-vector-11572379.jpg">
+    <Grid x:Name="Jegy" Background="#FF2F3139">
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="139,24,0,0" VerticalAlignment="Top" Width="170" Height="31" SelectionChanged="comboBox_SelectionChanged" FontSize="16"/>
+        <Label x:Name="label" Content="Film kiválasztása:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <Button x:Name="button" Content="Vásárlás" HorizontalAlignment="Left" Height="38" Margin="189,353,0,0" VerticalAlignment="Top" Width="120" FontSize="16" Click="button_Click"/>
+        <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Height="50" Margin="139,134,0,0" VerticalAlignment="Top" Width="50" FontSize="16" Click="button1_Click" Background="#FF494C51" Foreground="White"/>
+        <Label x:Name="label1" Content="Hely foglalása:" HorizontalAlignment="Left" Margin="24,86,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+        <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Height="50" Margin="199,134,0,0" VerticalAlignment="Top" Width="50" FontSize="16" Background="#FF494C51" Foreground="White" Click="button2_Click"/>
+        <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Height="50" Margin="259,134,0,0" VerticalAlignment="Top" Width="50" FontSize="16" Background="#FF494C51" Foreground="White" Click="button3_Click"/>
+        <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Height="50" Margin="139,194,0,0" VerticalAlignment="Top" Width="50" FontSize="16" Background="#FF494C51" Foreground="White" Click="button4_Click"/>
+        <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Height="50" Margin="199,194,0,0" VerticalAlignment="Top" Width="50" FontSize="16" Background="#FF494C51" Foreground="White" Click="button5_Click"/>
+        <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Height="50" Margin="259,194,0,0" VerticalAlignment="Top" Width="50" FontSize="16" Background="#FF494C51" Foreground="White" Click="button6_Click"/>
+        <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Height="50" Margin="139,254,0,0" VerticalAlignment="Top" Width="50" FontSize="16" Background="#FF494C51" Foreground="White" Click="button7_Click"/>
+        <Button x:Name="button8" Content="8" HorizontalAlignment="Left" Height="50" Margin="199,254,0,0" VerticalAlignment="Top" Width="50" FontSize="16" Background="#FF494C51" Foreground="White" Click="button8_Click"/>
+        <Button x:Name="button9" Content="9" HorizontalAlignment="Left" Height="50" Margin="259,254,0,0" VerticalAlignment="Top" Width="50" FontSize="16" Background="#FF494C51" Foreground="White" Click="button9_Click"/>
+        <Button x:Name="button10" Content="Vissza" HorizontalAlignment="Left" Height="38" Margin="26,353,0,0" VerticalAlignment="Top" Width="120" FontSize="16" Click="button10_Click"/>
+
     </Grid>
 </Window>

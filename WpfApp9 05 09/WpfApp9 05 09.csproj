@@ -124,5 +124,17 @@
   <ItemGroup>
     <Resource Include="show time cinema .jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Screenshot_2023-03-14-19-56-07-86_7194b3f5412bb444ad6d49859dec017f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cinema-movie-poster-design-template-popcorn-vector-12329007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="popcorn-cinema-icon-on-white-background-vector-11572379.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Cinema-background-with-popcorn-snacks-vector-01.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

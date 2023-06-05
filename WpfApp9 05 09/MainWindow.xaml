@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp9_05_09"
         mc:Ignorable="d"
-        Title="Loading" Height="450" Width="600" Activated="Window_load_Activated">
+        Title="Loading" Height="450" Width="600" Activated="Window_load_Activated" Icon="popcorn-cinema-icon-on-white-background-vector-11572379.jpg">
     <Grid x:Name="loading1">
         <Grid.Background>
             <ImageBrush ImageSource="cinema fedolap.jpg"/>

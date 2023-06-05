@@ -34,7 +34,9 @@ namespace WpfApp9_05_09
 
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Sajnos az összes jegy elkelt");
+            Window1 jegyvasarlas = new Window1();
+            jegyvasarlas.Show();
+            Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
