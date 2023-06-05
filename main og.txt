@@ -1,4 +1,30 @@
-﻿using System;
+<Grid x:Name="ablak" Initialized="Grid_Initialized">
+        <Grid.Background>
+            <ImageBrush ImageSource="show time cinema .jpg"/>
+        </Grid.Background>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="20" Margin="216,23,0,0" VerticalAlignment="Top" Width="118" SelectionChanged="comboBox_SelectionChanged"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="20" Margin="216,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="button" Content="Bejelentkezés" HorizontalAlignment="Left" Margin="254,117,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="button_Click"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="216,51,0,0" VerticalAlignment="Top" Width="118" Height="20" PasswordChanged="passwordBox_PasswordChanged"/>
+        <Label x:Name="label" Content="Felasználó név:" HorizontalAlignment="Left" Margin="113,19,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Jelszó:" HorizontalAlignment="Left" Margin="158,47,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button1" Content="Kilépés" HorizontalAlignment="Left" Margin="97,147,0,0" VerticalAlignment="Top" Width="74" Height="25" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Beállítások" HorizontalAlignment="Left" Height="25" Margin="175,147,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
+        <CheckBox x:Name="checkBox" Content="Emlékezz rám(név)" HorizontalAlignment="Left" Margin="215,76,0,0" VerticalAlignment="Top" BorderBrush="#FF707070"/>
+        <Button x:Name="button3" Content="Kiválasztás" HorizontalAlignment="Left" Height="25" Margin="155,31,0,0" VerticalAlignment="Top" Width="80" Click="button3_Click" Visibility="Hidden"/>
+        <Label x:Name="label2" Content="Felhaználó név törlése:" HorizontalAlignment="Left" Margin="23,30,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="143" Margin="59,30,0,0" VerticalAlignment="Top" Width="105" Visibility="Hidden"/>
+        <Button x:Name="button4" Content="Törlés" HorizontalAlignment="Left" Height="25" Margin="182,148,0,0" VerticalAlignment="Top" Width="80" Click="button4_Click" Visibility="Hidden"/>
+        <Label x:Name="label3" Content="Sötét mód:" HorizontalAlignment="Left" Margin="85,56,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <CheckBox x:Name="checkBox1" Content="" HorizontalAlignment="Left" Margin="154,63,0,0" VerticalAlignment="Top" Checked="checkBox1_Checked" Unchecked="checkBox1_Unchecked" Visibility="Hidden"/>
+        <Button x:Name="button5" Content="Regisztráció" HorizontalAlignment="Left" Height="25" Margin="254,147,0,0" VerticalAlignment="Top" Width="80" Click="button5_Click"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="20" Margin="215,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" Visibility="Hidden"/>
+        <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Height="20" Margin="215,51,0,0" VerticalAlignment="Top" Width="118" Visibility="Hidden"/>
+        <Label x:Name="label4" Content="" HorizontalAlignment="Left" Margin="61,112,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="label5" Content="" HorizontalAlignment="Left" Margin="148,90,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="14"/>
+    </Grid>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,54 +45,14 @@ namespace WpfApp9_05_09
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Window2 : Window
+    public partial class MainWindow : Window
     {
         List<string> combo_names = new List<string> { };
         List<string> users = new List<string> { };
         List<string> passwords = new List<string> { };
 
-        static class Rot13
-        {
-            /// <summary>
-            /// Performs the ROT13 character rotation.
-            /// </summary>
-            public static string Transform(string value)
-            {
-                char[] array = value.ToCharArray();
-                for (int i = 0; i < array.Length; i++)
-                {
-                    int number = (int)array[i];
-
-                    if (number >= 'a' && number <= 'z')
-                    {
-                        if (number > 'm')
-                        {
-                            number -= 13;
-                        }
-                        else
-                        {
-                            number += 13;
-                        }
-                    }
-                    else if (number >= 'A' && number <= 'Z')
-                    {
-                        if (number > 'M')
-                        {
-                            number -= 13;
-                        }
-                        else
-                        {
-                            number += 13;
-                        }
-                    }
-                    array[i] = (char)number;
-                }
-                return new string(array);
-            }
-        }
-
         public int settings = 0;
-        public Window2()
+        public MainWindow()
         {
             InitializeComponent();
 
@@ -80,13 +66,12 @@ namespace WpfApp9_05_09
                 {
                     comboBox.Items.Add(fileLines[i]);
                     combo_names.Add(fileLines[i]);
-                    listBox.Items.Add(fileLines[i]);
                 }
                 var fileLines_user = File.ReadAllLines("users.txt");
                 for (int i = 0; i < (fileLines_user.Length - 1); i++)
                 {
                     users.Add(fileLines_user[i]);
-                    passwords.Add(Rot13.Transform(fileLines_user[i + 1]));
+                    passwords.Add(fileLines_user[i + 1]);
                 }
             }
             catch
@@ -100,13 +85,12 @@ namespace WpfApp9_05_09
                 {
                     comboBox.Items.Add(fileLines[i]);
                     combo_names.Add(fileLines[i]);
-                    listBox.Items.Add(fileLines[i]);
                 }
                 var fileLines_user = File.ReadAllLines("users.txt");
                 for (int i = 0; i < (fileLines_user.Length - 1); i++)
                 {
                     users.Add(fileLines_user[i]);
-                    passwords.Add(Rot13.Transform(fileLines_user[i + 1]));
+                    passwords.Add(fileLines_user[i + 1]);
                 }
             }
 
@@ -168,7 +152,6 @@ namespace WpfApp9_05_09
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.MainWindow = this;
             if (settings == 0)
             {
                 this.Title = "Beállítások";
@@ -332,10 +315,7 @@ namespace WpfApp9_05_09
             button3.Background = new SolidColorBrush(Color.FromRgb(221, 221, 221));
             button4.Background = new SolidColorBrush(Color.FromRgb(221, 221, 221));
             button5.Background = new SolidColorBrush(Color.FromRgb(221, 221, 221));
-            ablak.Background = new ImageBrush() { ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "show time cinema .jpg")) };         
-            
-
-           
+            ablak.Background = new SolidColorBrush(Colors.White);
             listBox.Background = new SolidColorBrush(Colors.White);
             comboBox.Background = new SolidColorBrush(Colors.White);
             textBox.Background = new SolidColorBrush(Colors.White);
@@ -410,7 +390,7 @@ namespace WpfApp9_05_09
                         for (int i = 0; i < users.Count; i++)
                         {
                             ir.WriteLine(users[i]);
-                            ir.WriteLine(Rot13.Transform(passwords[i]));
+                            ir.WriteLine(passwords[i]);
                         }
 
                         ir.Close();

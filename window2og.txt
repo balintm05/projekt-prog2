@@ -1,0 +1,186 @@
+<Grid x:Name="loading1">
+        <Grid.Background>
+            <ImageBrush ImageSource="cinema fedolap.jpg"/>
+        </Grid.Background>
+        <ProgressBar x:Name="load" HorizontalAlignment="Left" Height="10" Margin="135,384,0,0" VerticalAlignment="Top" Width="329"/>
+        <Label x:Name="label" Content="Betöltés" HorizontalAlignment="Left" Margin="258,358,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
+
+    </Grid>
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace WpfApp9_05_09
+{
+    /// <summary>
+    /// Interaction logic for Window2.xaml
+    /// </summary>
+    public partial class Window2 : Window
+    {
+        public Window2()
+        {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            load.Minimum = 0;
+            load.Maximum = 100;
+
+
+        }
+
+        private async void Window_load_Activated(object sender, EventArgs e)
+        {
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            load.Value = 10;
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(200);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            load.Value = 15;
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(510);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(510);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            load.Value = 50;
+            await Task.Delay(200);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(200);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            load.Value = 75;
+            await Task.Delay(250);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            load.Value = 90;
+            await Task.Delay(200);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            load.Value = 95;
+            await Task.Delay(500);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(1500);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            load.Value = 100;
+            await Task.Delay(1000);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            await Task.Delay(100);
+            label.Content = "Betöltés.";
+            await Task.Delay(100);
+            label.Content = "Betöltés..";
+            await Task.Delay(100);
+            label.Content = "Betöltés...";
+            Window2 mainablak = new Window2();
+            mainablak.Show();
+            Close();
+        }
+    }
+}
