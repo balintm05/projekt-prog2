@@ -169,6 +169,7 @@ namespace WpfApp9_05_09
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow = this;
+            label5.Content = "";
             if (settings == 0)
             {
                 this.Title = "Beállítások";
